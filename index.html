@@ -65,7 +65,11 @@
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nobis molestiae aliquam modi? Tempora eius est ad distinctio atque aliquid sint, quod eum, aperiam accusamus quibusdam beatae dolorum numquam odio!
                                 </p>
-                                <button data-modal-close>Закрыть</button>
+                                <button data-modal-close class="button-close">
+                                    <svg class="data-modal-icon" width="11px" height="11px">
+                                        <use href="./images/icons/sprite.svg#icon-close"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -104,9 +108,30 @@
                 <div class="work-div">
                     <h2>Чем мы занимаемся</h2>
                         <ul class="work-ul">
-                            <li><img src="./images/img01.png" alt="изображение" width="370"></li>
-                            <li><img src="./images/img02.png" alt="изображение" width="370"></li>
-                            <li><img src="./images/img03.png" alt="изображение" width="370"></li>
+                            <li>
+                                <div class="work-img">
+                                    <img src="./images/img01.png" alt="изображение" width="370">
+                                    <div class="work-text">
+                                        <p>ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="work-img">
+                                    <img src="./images/img02.png" alt="изображение" width="370">
+                                    <div class="work-text">
+                                        <p>МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="work-img">
+                                    <img src="./images/img03.png" alt="изображение" width="370">
+                                    <div class="work-text">
+                                        <p>ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                 </div>
             </div>
@@ -125,7 +150,8 @@
                                 <div class="social-list">
                                     <a href="" class="social-list-link">
                                         <svg class="social-list-icon" width="44px" height="44px">
-                                            <use href="./images/icons/sprite.svg#icon-instagram"></use>
+                                            <use href="./images/icons/sprite.svg#icon-instagram">
+                                            </use>
                                         </svg>
                                     </a>
                                     <a href="" class="social-list-link">

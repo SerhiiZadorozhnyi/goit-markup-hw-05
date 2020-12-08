@@ -117,7 +117,6 @@ h2{
 
 .site-nav .link.current::after{
     display: box;
-    /* background: var(--accent-color); */
     background: currentColor;
     content: "";
     width: inherit;
@@ -185,6 +184,7 @@ h2{
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .block-one{
@@ -204,6 +204,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .block-one-text{
@@ -234,6 +235,7 @@ h2{
     margin-right: auto;
     color: var(--text-color-white);
     border: 0;
+    position: relative;
     }
     
 .modal{
@@ -242,6 +244,44 @@ h2{
     background-color: var(--text-color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    position: absolute;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal p{
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.button-close{
+    width: 30px;
+    height: 30px;
+    background-color: var(--text-color-white);
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 490px;
+    bottom: 150px;
+}
+
+.data-modal-icon{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+}
+
+.button-close:hover{
+    border: 1px solid red;
 }
 
 /*Особенности*/
@@ -299,10 +339,45 @@ h2{
 .work-ul{
     display: flex;
     justify-content: space-between;
+    /* position: relative; */
 }
 
 .work-ul li{
     display: flex;
+}
+
+.work-img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.work-img img{
+    position: relative;
+}
+
+.work-text{
+    background: rgba(47, 48, 58, 0.8);
+    width: 370px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+.work-text p{
+    position: absolute;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-color-white);
 }
 
 /* Наша команда */
@@ -621,6 +696,7 @@ h2{
 
 .projects li{
     height: 404px;
+    width: 370px;
     background: var(--text-color-white);
 }
 
@@ -636,6 +712,38 @@ h2{
 
 .projects-image{
     display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects a:hover .overlay {
+    transform: translatex(0);
+  }
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translatey(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: transform 250ms ease; */
+}
+
+.overlay p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
 }
 
 .projects-text{
@@ -648,7 +756,7 @@ h2{
     border-right: 1px solid var(--border-color);
 }
 
-.projects h3{
+.projects-text h3{
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
@@ -657,7 +765,7 @@ h2{
     padding-bottom: 4px;
 }
 
-.projects p{
+.projects-text p{
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
