@@ -241,20 +241,6 @@ h2{
     border: 0;
 }
 
-/* .modal-wrapper{
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-} */
-
 .backdrop{
     position: fixed;
     top: 0;
@@ -263,35 +249,47 @@ h2{
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    z-index: 1;
 }
 
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
-    visibility: hidden;  
+    visibility: hidden;
 }
 
 .backdrop.is-hidden .modal{
-    transform: scale(0) rotate(180deg);
+    /* transform: translate(100%, 100%); */
+    /* transition:  250ms cubic-bezier(0.4, 0, 0.2, 1); */
     opacity: 0;
 }
     
 .modal{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     width: 528px;
     height: 581px;
     background-color: var(--text-color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transform: scale(1)  translate(-50%,-50%);
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    animation-name: anim;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
+    z-index: 2;
 }
 
+@keyframes anim{
+    0%{
+        transform: scale(0) translate(-50%, -50%);
+    }
+
+    100%{
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
 
 .modal p{
     font-family: Roboto;
@@ -302,7 +300,7 @@ h2{
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
-    padding-top: 2px;/
+    padding-top: 2px;
 }
 
 .modal-input-div{
@@ -389,6 +387,19 @@ h2{
     left: 490px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    /* animation-name: anim;
+    animation-direction: reverse;
+    animation-duration: 250ms; */
+}
+
+@keyframes back-anim{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(0);
+    }
 }
 
 .data-modal-icon{
